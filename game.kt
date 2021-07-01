@@ -1,6 +1,6 @@
 fun main() {
     val player = Player("Madrigal")
-    player.castFireball(5)
+    player.castFireball()
 
     val auraColor = player.auraColor()
     player.auraColor()
