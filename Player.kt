@@ -5,12 +5,12 @@ class Player (_name:String,
               private val isImmortal: Boolean ){
 
     var name = _name
-        get() = "${field.capitalize()} of $hometown"
+        get() = "來自 $hometown 的 ${field.capitalize()}"
         private set(value){
             field = value.trim()
         }
 
-    val hometown = selectHometown()
+    val hometown by lazy { selectHometown() }
 
     init{
         require(healthPoints >0 ,{"健康指數須大於0。"})
